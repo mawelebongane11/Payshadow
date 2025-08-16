@@ -1,0 +1,39 @@
+{
+  "name": "Currency",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Currency code (USD, EUR, etc.)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Currency name"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Currency symbol"
+    },
+    "exchangeRate": {
+      "type": "number",
+      "description": "Exchange rate to USD"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "description": "Currency availability"
+    }
+  },
+  "required": [
+    "code",
+    "name",
+    "symbol",
+    "exchangeRate"
+  ],
+  "x-accessControl": {
+    "permissions": {
+      "read": "all",
+      "write": "admin"
+    }
+  }
+}
